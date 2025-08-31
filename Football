@@ -1,0 +1,87 @@
+//Football
+/*This class is designed to be the blueprint for hockey players referenced in the Main program.
+Including stat lines such as Player name, Seasons Played, Touchdowns, and tackles. Methods are also
+available to add touchdowns, years played, and tackles. This also includes a
+live update to the user as the program ran of when the events happened. Finally, a print out at the
+  end will provide all updates to stat lines.*/
+public class Football {
+
+    private String playerName;
+    private int seasonsPlayed;
+    private int touchdowns;
+    private int tackles;
+//Constructor
+    public Football(String playerName, int seasonsPlayed, int touchdowns, int tackles){
+        this.playerName = playerName;
+        this.seasonsPlayed = seasonsPlayed;
+        this.touchdowns = touchdowns;
+        this.tackles = tackles;
+    }
+    //Overloaded Constructor
+    public Football(){
+        this.playerName = null;
+        this.seasonsPlayed = 0;
+        this.touchdowns = 0;
+        this.tackles = 0;
+    }
+    //Getters and Setters for playerName, seasonsPlayed; touchdowns; tackles
+    //getPlayerName
+    public String getPlayerName(){
+        return playerName;
+    }
+    //setPlayerName
+    public void setPlayerName(String playerName){
+        this.playerName = playerName;
+    }
+    //getSeasonsPlayed
+    public int getSeasonsPlayed(){
+        return seasonsPlayed;
+    }
+    //setSeasonPlayed
+    public void setSeasonPlayed(int seasonsPlayed){
+        this.seasonsPlayed = seasonsPlayed;
+    }
+    //getTouchdowns
+    public int getTouchdowns(){
+        return touchdowns;
+    }
+    //setTouchdowns
+    public void setTouchdowns(int touchdowns){
+        this.touchdowns = touchdowns;
+
+    }
+    //getTackles
+    public int getTackles(){
+        return tackles;
+
+    }
+    //setTackles
+    public void setTackles(int tackles){
+        this.tackles = tackles;
+
+    }
+/*Custom method for adding seasonPlayed. This also includes a
+live update to the user as the program ran of when the events happened.*/
+    public void addSeasonPlayed(int seasonsPlayedTotal){
+        this.seasonsPlayed+=seasonsPlayedTotal;
+    }
+    /*Custom method for adding touchdowns. This also includes a
+live update to the user as the program ran of when the events happened.*/
+    public void addTouchdown(int touchdownsTotal){
+        this.touchdowns += touchdownsTotal;
+        System.out.println(playerName+" recorded a touchdown.");
+        }
+
+    /*Custom method for adding tackles. This also includes a
+live update to the user as the program ran of when the events happened.*/
+    public void addTackle(int tacklesTotal){
+        this.tackles+=tacklesTotal;
+        System.out.println(playerName+" recorded a tackle.");
+    }
+
+
+    //Print Method
+    public void printDetails(){
+        System.out.println("\nPlayer Name:" + playerName + "\nSeasons Played:" + seasonsPlayed + "\nTouchdowns:" + touchdowns + "\nTackles:" + tackles+"");
+    }
+}
