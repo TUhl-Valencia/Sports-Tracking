@@ -1,0 +1,44 @@
+public class SportsApp {
+    public static void main(String[]args){
+        Hockey crosby = new Hockey("Sidney Crosby",1272,592,1004 );
+        Hockey caufield = new Hockey("Cole Caufield",205,81,68);
+        Hockey rookie = new Hockey();
+
+        Football baker = new Football("Budda Baker", 7,0,676);
+        Football boyd = new Football("Tyler Boyd", 8,31,11);
+        Football newPlayer = new Football();
+
+
+        //First Printout before stat update
+        crosby.printDetails();
+        caufield.printDetails();
+        rookie.printDetails();
+        baker.printDetails();
+        newPlayer.printDetails();
+
+        //Using Methods
+        System.out.println("\nLive Updates:");
+        crosby.addGamePlayed(1);
+        caufield.addGamePlayed(1);
+        crosby.addAssist(1);
+        caufield.addGoal(1);
+        crosby.addAssist(1);
+        baker.addSeasonPlayed(1);
+        boyd.addSeasonPlayed(1);
+        baker.addTackle(1);
+        baker.addTackle(1);
+        baker.addTackle(1);
+        boyd.addTouchdown(1);
+        baker.addTackle(1);
+
+        //Printing Details after stat update
+        crosby.printDetails();
+        caufield.printDetails();
+        rookie.printDetails();
+        baker.printDetails();
+        boyd.printDetails();
+        newPlayer.printDetails();
+
+    }
+
+}
