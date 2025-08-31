@@ -1,0 +1,85 @@
+//Hockey
+/*This class is designed to be the blueprint for hockey players referenced in the Main program.
+* Including stat lines such as Player name, Games Played, goals, assists. Methods are also
+available to add goals, games played, and assists. This also includes a
+live update to the user as the program ran of when the events happened. Finally, a print out at the
+  end will provide all updates to stat lines.*/
+
+public class Hockey {
+
+    private String name;
+    private int gamesPlayed;
+    private int goals;
+    private int assists;
+
+
+    // Constructor accepting all fields
+    public Hockey(String name, int gamesPlayed, int goals, int assists) {
+        this.name = name;
+        this.gamesPlayed = gamesPlayed;
+        this.goals = goals;
+        this.assists = assists;
+    }
+
+    // Overloaded constructor setting all fields to zero or null
+    public Hockey() {
+        this.name = null;
+        this.gamesPlayed = 0;
+        this.goals = 0;
+        this.assists = 0;
+    }
+    //Setters and Getters
+
+    //Get name
+    public String getName() {
+        return name;
+    }
+    //Set name
+    public void setName(String name) {
+        this.name = name;
+    }
+    //Get gamesPlayed
+    public int getGamesPlayed() {
+        return gamesPlayed;
+    }
+    //Set gamesPlayed
+    public void setGamesPlayed(int gamesPlayed) {
+        this.gamesPlayed = gamesPlayed;
+    }
+    //Get goals
+    public int getGoals() {
+        return goals;
+    }
+    //Set goals
+    public void setGoals(int goals) {
+        this.goals = goals;
+    }
+    //Get assists
+    public int getAssists() {
+        return assists;
+    }
+    //Set assists
+    public void setAssists(int assists) {
+        this.assists = assists;
+    }
+    /*Custom method for adding Games Played. This also includes a
+live update to the user as the program ran of when the events happened.*/
+    public void addGamePlayed(int gamesPlayedTotal) {
+        this.gamesPlayed += gamesPlayedTotal;
+    }
+    /*Custom method for adding goal. This also includes a
+live update to the user as the program ran of when the events happened.*/
+    public void addGoal(int goalsTotal) {
+        this.goals += goalsTotal;
+        System.out.println(name+" recorded a goal.");
+    }
+    /*Custom method for adding assists. This also includes a
+live update to the user as the program ran of when the events happened.*/
+    public void addAssist(int assistsTotal) {
+        this.assists += assistsTotal;
+        System.out.println(name+" recorded an assist.");
+    }
+    public void printDetails() {
+        System.out.println("\nPlayer Name: " + name + "\nGames Played:" + gamesPlayed + "\nGoals:" + goals + "\nAssists:" + assists);
+    }
+    }
